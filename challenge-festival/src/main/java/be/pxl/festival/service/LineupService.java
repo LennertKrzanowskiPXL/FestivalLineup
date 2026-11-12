@@ -50,4 +50,16 @@ public class LineupService {
     public List<Act> findAll() {
         return new ArrayList<>(acts.values());
     }
+
+    public List<Act> findSpecificDay(FestivalDay day){
+        ArrayList<Act> actsDay = new ArrayList<>();
+        acts.forEach((n) -> {
+            if(n.getDay() == day)
+            {
+                actsDay.add(n);
+            }
+        }
+        );
+        return actsDay;
+    }
 }

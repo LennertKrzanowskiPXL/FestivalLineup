@@ -22,4 +22,7 @@ public class LineupController {
     public List<Act> findAll() {
         return lineupService.findAll();
     }
+
+    @GetMapping("/day=")
+    public List<Act> findSpecificDay() {return lineupService.findAll();}
 }
